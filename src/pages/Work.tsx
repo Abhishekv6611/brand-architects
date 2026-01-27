@@ -122,6 +122,7 @@ export default function Work() {
                       title={project.title}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      loading="lazy"
                     />
                   </div>
 
@@ -180,6 +181,7 @@ export default function Work() {
                           title={`Video ${index + 5}`}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
+                          loading="lazy"
                         />
                       </div>
                     </div>

@@ -29,6 +29,7 @@ export default function Index() {
             src={heroImage}
             alt="Creative advertising"
             className="w-full h-full object-cover opacity-30"
+            loading="lazy"
           />
         </div>
 
