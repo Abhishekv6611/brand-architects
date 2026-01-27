@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedElement } from "@/components/AnimatedText";
+import QuoteSection from "@/components/QuoteSection";
 import heroImage from "@/assets/hero-image.jpg";
 
 const services = [
@@ -30,7 +31,7 @@ export default function Index() {
             className="w-full h-full object-cover opacity-30"
           />
         </div>
-        
+
         <div className="container mx-auto px-6 lg:px-12 relative z-20">
           <div className="max-w-4xl">
             <motion.p
@@ -41,7 +42,7 @@ export default function Index() {
             >
               Strategy-Led Creative Agency
             </motion.p>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -52,7 +53,7 @@ export default function Index() {
               <br />
               We Build Influence.
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -61,7 +62,7 @@ export default function Index() {
             >
               Strategy-led advertising for brands that want to matter.
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,7 +95,7 @@ export default function Index() {
                 Blending Creativity, Culture & Strategy
               </h2>
             </AnimatedElement>
-            
+
             <AnimatedElement delay={0.2}>
               <p className="body-large text-muted-foreground">
                 Rezintra is a modern advertising agency blending creativity, culture, and strategy to shape brands that connect with real people. We don't chase trends—we create them.
@@ -113,7 +114,7 @@ export default function Index() {
                 Creativity Without Strategy Is Noise
               </h2>
             </AnimatedElement>
-            
+
             <AnimatedElement delay={0.2}>
               <p className="body-large text-primary-foreground/70 max-w-2xl mx-auto">
                 Every idea we create is grounded in insight, data, and human behavior. We believe in building brands that don't just speak—they resonate.
@@ -132,7 +133,7 @@ export default function Index() {
             </p>
             <h2 className="section-heading mb-16">Our Services</h2>
           </AnimatedElement>
-          
+
           <div className="border-t border-border">
             {services.map((service, index) => (
               <AnimatedElement key={service} delay={index * 0.1}>
@@ -148,7 +149,7 @@ export default function Index() {
               </AnimatedElement>
             ))}
           </div>
-          
+
           <AnimatedElement delay={0.5} className="mt-12">
             <Button variant="outline" size="lg" asChild>
               <Link to="/services">
@@ -168,7 +169,7 @@ export default function Index() {
               Ready to Build Something That Matters?
             </h2>
           </AnimatedElement>
-          
+
           <AnimatedElement delay={0.2}>
             <Button variant="hero" size="lg" asChild>
               <Link to="/contact">
@@ -180,6 +181,7 @@ export default function Index() {
         </div>
       </section>
 
+      <QuoteSection />
       <Footer />
     </div>
   );

@@ -45,7 +45,7 @@ export default function Services() {
           >
             Our Services
           </motion.p>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function Services() {
                       {service.description}
                     </p>
                   </div>
-                  
+
                   <div className="lg:pt-12">
                     <p className="text-sm uppercase tracking-widest text-muted-foreground mb-6">
                       Deliverables
@@ -107,11 +107,11 @@ export default function Services() {
               Have a project in mind? We'd love to hear about it.
             </p>
           </AnimatedElement>
-          
+
           <AnimatedElement delay={0.2}>
-            <Button 
-              variant="heroOutline" 
-              size="lg" 
+            <Button
+              variant="heroOutline"
+              size="lg"
               asChild
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
             >

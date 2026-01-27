@@ -41,7 +41,7 @@ export default function Contact() {
           >
             Get in Touch
           </motion.p>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Contact() {
                     placeholder="Your name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm uppercase tracking-widest mb-3">
                     Email
@@ -87,7 +87,7 @@ export default function Contact() {
                     placeholder="your@email.com"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="company" className="block text-sm uppercase tracking-widest mb-3">
                     Company
@@ -100,7 +100,7 @@ export default function Contact() {
                     placeholder="Your company name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm uppercase tracking-widest mb-3">
                     Project Details
@@ -115,14 +115,14 @@ export default function Contact() {
                     placeholder="Tell us about your project..."
                   />
                 </div>
-                
+
                 <Button type="submit" variant="hero" size="lg">
                   Start the Conversation
                   <ArrowRight className="ml-2" />
                 </Button>
               </form>
             </AnimatedElement>
-            
+
             <AnimatedElement delay={0.2} className="lg:pt-16">
               <div className="space-y-12">
                 <div>
@@ -133,7 +133,7 @@ export default function Contact() {
                     hello@rezintra.com
                   </a>
                 </div>
-                
+
                 <div>
                   <h3 className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
                     Follow Us
@@ -144,7 +144,7 @@ export default function Contact() {
                     <a href="#" className="text-lg hover:underline underline-offset-4">Twitter</a>
                   </div>
                 </div>
-                
+
                 <div className="pt-8 border-t border-border">
                   <p className="body-large text-muted-foreground">
                     We typically respond within 24 hours. For urgent inquiries, don't hesitate to reach out directly via email.

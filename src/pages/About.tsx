@@ -38,7 +38,7 @@ export default function About() {
           >
             About Rezintra
           </motion.p>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,20 +57,20 @@ export default function About() {
             <AnimatedElement>
               <h2 className="section-heading">Our Story</h2>
             </AnimatedElement>
-            
+
             <div className="space-y-6">
               <AnimatedElement delay={0.1}>
                 <p className="body-large text-muted-foreground">
                   Inspired by global agencies like Ogilvy and Dentsu, Rezintra was founded with a simple belief: advertising should build brands, not just awareness.
                 </p>
               </AnimatedElement>
-              
+
               <AnimatedElement delay={0.2}>
                 <p className="body-large text-muted-foreground">
                   We focus on long-term brand impact rather than short-term visibility. Every campaign we create is designed to make a lasting impression—one that turns audiences into advocates and customers into communities.
                 </p>
               </AnimatedElement>
-              
+
               <AnimatedElement delay={0.3}>
                 <p className="body-large text-muted-foreground">
                   Our team brings together strategists, creatives, and digital experts who share a common passion: creating work that matters.
@@ -90,7 +90,7 @@ export default function About() {
             </p>
             <h2 className="section-heading mb-16">What We Believe</h2>
           </AnimatedElement>
-          
+
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {values.map((value, index) => (
               <AnimatedElement key={value.title} delay={index * 0.1}>
@@ -117,7 +117,7 @@ export default function About() {
                 "The best ideas don't come from creativity alone. They come from understanding."
               </h2>
             </AnimatedElement>
-            
+
             <AnimatedElement delay={0.2}>
               <p className="text-lg text-primary-foreground/70">
                 — The Rezintra Philosophy
