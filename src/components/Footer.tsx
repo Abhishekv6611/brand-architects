@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import { Instagram, Linkedin, Facebook, Twitter, ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Facebook, Twitter, Youtube, ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,10 +13,10 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/rezintra/?hl=en", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/rezintra/posts/?feedView=all", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/rezintra/", label: "Facebook" },
+    { icon: Youtube, href: "https://www.youtube.com/channel/UC7qeI7bP_jzr3S0FILkMHhQ", label: "YouTube" },
   ];
 
   return (

@@ -182,7 +182,7 @@ export default function Index() {
         </div>
       </section>
 
-      <QuoteSection />
+      {/* <QuoteSection /> */}
       <Footer />
     </div>
   );
