@@ -139,9 +139,10 @@ export default function Contact() {
                     Follow Us
                   </h3>
                   <div className="flex gap-6">
-                    <a href="#" className="text-lg hover:underline underline-offset-4">LinkedIn</a>
-                    <a href="#" className="text-lg hover:underline underline-offset-4">Instagram</a>
-                    <a href="#" className="text-lg hover:underline underline-offset-4">Twitter</a>
+                    <a href="https://www.linkedin.com/company/rezintra/posts/?feedView=all" className="text-lg hover:underline underline-offset-4">LinkedIn</a>
+                    <a href="https://www.instagram.com/rezintra/?hl=en" className="text-lg hover:underline underline-offset-4">Instagram</a>
+                    <a href="https://www.facebook.com/rezintra/" className="text-lg hover:underline underline-offset-4">Facebook</a>
+                    <a href="https://www.youtube.com/channel/UC7qeI7bP_jzr3S0FILkMHhQ" className="text-lg hover:underline underline-offset-4">YouTube</a>
                   </div>
                 </div>
 
