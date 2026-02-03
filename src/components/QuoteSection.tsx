@@ -1,3 +1,5 @@
+import logo from "../assets/logo.png";
+
 export default function QuoteSection() {
     return (
         <section className="py-16 lg:py-24 bg-secondary">
@@ -16,8 +18,8 @@ export default function QuoteSection() {
                             "We don't just create content, we craft experiences that resonate with your audience and drive real results."
                         </p>
 
-                        <footer className="text-muted-foreground">
-                            <p className="font-semibold">— Rezintra Productions</p>
+                        <footer className="text-muted-foreground flex flex-col items-center">
+                            <img src={logo} alt="Rezintra Productions" className="h-10 w-auto object-contain mb-2 invert" />
                             <p className="text-sm">No.1 Productions in Kerala</p>
                         </footer>
                     </blockquote>

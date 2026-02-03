@@ -3,6 +3,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
+import logo from "../assets/newblck.png";
+
 const navLinks = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
@@ -18,8 +20,8 @@ export default function Navigation() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm">
         <nav className="container mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
-          <Link to="/" className="font-heading text-xl font-bold tracking-tight">
-            REZINTRA
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="REZINTRA" className="h-16 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
