@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedElement } from "@/components/AnimatedText";
@@ -16,7 +17,40 @@ const services = [
   "Performance Marketing",
 ];
 
+type VideoCategory = "reels" | "ads" | "motion";
+
+interface VideoItem {
+  title: string;
+  embedUrl: string;
+}
+
+const workVideos: Record<VideoCategory, VideoItem[]> = {
+  reels: [
+    { title: "Brand Reel — Rezintra", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { title: "Product Launch Reel", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { title: "Social Media Reel", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+  ],
+  ads: [
+    { title: "Campaign — Bold Moves", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { title: "Digital Ad — Connected", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { title: "TV Spot — Elevate", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+  ],
+  motion: [
+    { title: "Logo Animation", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { title: "Explainer — How It Works", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+    { title: "Title Sequence", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+  ],
+};
+
+const categories: { key: VideoCategory; label: string }[] = [
+  { key: "reels", label: "Reels" },
+  { key: "ads", label: "Ads" },
+  { key: "motion", label: "Motion Graphics" },
+];
+
 export default function Index() {
+  const [activeCategory, setActiveCategory] = useState<VideoCategory>("reels");
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -103,6 +137,74 @@ export default function Index() {
               </p>
             </AnimatedElement>
           </div>
+        </div>
+      </section>
+
+      {/* Work Showcase */}
+      <section className="py-24 lg:py-40 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-12">
+          <AnimatedElement>
+            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
+              Our Work
+            </p>
+            <h2 className="section-heading mb-12">Selected Work</h2>
+          </AnimatedElement>
+
+          {/* Category Tabs */}
+          <AnimatedElement delay={0.1}>
+            <div className="flex gap-2 mb-12">
+              {categories.map((cat) => (
+                <button
+                  key={cat.key}
+                  onClick={() => setActiveCategory(cat.key)}
+                  className={`px-6 py-3 text-sm font-heading font-medium uppercase tracking-wider border-2 transition-all duration-300 ${
+                    activeCategory === cat.key
+                      ? "bg-foreground text-background border-foreground"
+                      : "bg-transparent text-foreground border-border hover:border-foreground"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </AnimatedElement>
+
+          {/* Video Grid */}
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {workVideos[activeCategory].map((video, index) => (
+              <AnimatedElement key={`${activeCategory}-${index}`} delay={index * 0.1}>
+                <div className="group">
+                  <div className="aspect-video bg-primary/10 overflow-hidden mb-4 relative">
+                    <iframe
+                      src={video.embedUrl}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg">
+                    {video.title}
+                  </h3>
+                </div>
+              </AnimatedElement>
+            ))}
+          </motion.div>
+
+          <AnimatedElement delay={0.4} className="mt-12">
+            <Button variant="outline" size="lg" asChild>
+              <Link to="/work">
+                View All Work
+                <ArrowRight className="ml-2" />
+              </Link>
+            </Button>
+          </AnimatedElement>
         </div>
       </section>
 
