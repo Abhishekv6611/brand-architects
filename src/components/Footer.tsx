@@ -6,7 +6,6 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
-    { name: "Work", path: "/work" },
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },

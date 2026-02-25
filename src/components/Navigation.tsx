@@ -8,7 +8,6 @@ import logo from "../assets/newblck.png";
 const navLinks = [
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
-  { name: "Work", path: "/work" },
   { name: "Contact", path: "/contact" },
 ];
 

@@ -17,12 +17,29 @@ export default function Contact() {
     message: "",
   });
 
+  const WHATSAPP_NUMBER = "918086611724"; // +91 8086611724
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const text = [
+      ` ${formData.name}`,
+      `${formData.email}`,
+      formData.company ? `${formData.company}` : null,
+      ``,
+      formData.message,
+    ]
+      .filter((line) => line !== null)
+      .join("\n");
+
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, "_blank");
+
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
+      title: "Redirecting to WhatsApp!",
+      description: "Your message is ready — just hit Send in WhatsApp.",
     });
+
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
