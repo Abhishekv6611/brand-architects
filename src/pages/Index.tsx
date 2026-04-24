@@ -69,9 +69,9 @@ const workVideos: Record<VideoCategory, VideoItem[]> = {
     { title: "Creative Campaign 16", embedUrl: "https://www.youtube.com/embed/W9nqrl30vmY", tag: "Ad" },
   ],
   motion: [
-    { title: "Logo Animation", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", tag: "Motion" },
-    { title: "Explainer — How It Works", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", tag: "Explainer" },
-    { title: "Title Sequence", embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", tag: "Sequence" },
+    { title: "Logo Animation", embedUrl: "https://www.youtube.com/embed/Uuqfp8fGc_Q", tag: "Motion" },
+    { title: "Explainer — How It Works", embedUrl: "https://www.youtube.com/embed/BUdnAYeoGNQ", tag: "Explainer" },
+    { title: "Title Sequence", embedUrl: "https://www.youtube.com/embed/W9nqrl30vmY", tag: "Sequence" },
   ],
 };
 
